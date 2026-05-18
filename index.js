@@ -41,7 +41,7 @@ builder.defineMetaHandler((args) => {
         id: "kingdom-series",
         type: "series",
         name: "Kingdom",
-        videos: Array.from({ length: 162 }, (_, i) => {
+        videos: Array.from({ length: 155 }, (_, i) => {
           let season = 1;
           let episode = i + 1;
 
