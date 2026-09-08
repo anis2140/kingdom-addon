@@ -18,6 +18,8 @@ const manifest = {
 
 const builder = new addonBuilder(manifest);
 
+const poster = "https://cdn.anisearch.com/images/anime/cover/14/14737_600.webp";
+
 // ---------- CATALOG ----------
 builder.defineCatalogHandler(() => {
   return Promise.resolve({
@@ -26,8 +28,8 @@ builder.defineCatalogHandler(() => {
         id: "kingdom-series",
         type: "series",
         name: "Kingdom",
-        poster:
-          "https://cdn.anisearch.com/images/anime/cover/14/14737_600.webp",
+        poster,
+        posterShape: "poster",
       },
     ],
   });
@@ -41,6 +43,8 @@ builder.defineMetaHandler((args) => {
         id: "kingdom-series",
         type: "series",
         name: "Kingdom",
+        poster,
+        posterShape: "poster",
         videos: Array.from({ length: 155 }, (_, i) => {
           let season = 1;
           let episode = i + 1;
