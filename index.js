@@ -19,6 +19,8 @@ const manifest = {
 const builder = new addonBuilder(manifest);
 
 const poster = "https://cdn.anisearch.com/images/anime/cover/14/14737_600.webp";
+const background =
+  "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/06/kingdom-anime-season-4.jpg?q=49&fit=contain&w=1920&h=1080&dpr=2";
 
 // ---------- CATALOG ----------
 builder.defineCatalogHandler(() => {
@@ -29,6 +31,7 @@ builder.defineCatalogHandler(() => {
         type: "series",
         name: "Kingdom",
         poster,
+        background,
         posterShape: "poster",
       },
     ],
@@ -44,6 +47,7 @@ builder.defineMetaHandler((args) => {
         type: "series",
         name: "Kingdom",
         poster,
+        background,
         posterShape: "poster",
         videos: Array.from({ length: 155 }, (_, i) => {
           let season = 1;
